@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "metadata": {
+    "appmode": "python-streamlit",
+    "entrypoint": "app.py"
+  },
+  "locale": "nb_NO.cp1252",
+  "python": {
+    "version": "3.6.7",
+    "package_manager": {
+      "name": "pip",
+      "version": "20.1.1",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "f021197adcca3c55e319ff1a8e687661"
+    },
+    ".ipynb_checkpoints\\exampleNotebook-checkpoint.ipynb": {
+      "checksum": "02f666860b227dc166fef48e4299faf9"
+    },
+    "__pycache__\\ODS_connect.cpython-36.pyc": {
+      "checksum": "9cc810c3b2b17ed2dfcd4e211dc004c0"
+    },
+    "app.py": {
+      "checksum": "e1d878cb50dad3da75dc9bed3bb6c868"
+    },
+    "exampleNotebook.ipynb": {
+      "checksum": "02f666860b227dc166fef48e4299faf9"
+    }
+  }
+}
