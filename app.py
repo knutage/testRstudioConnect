@@ -130,8 +130,11 @@ idxN = np.argpartition(distance_profile, k)[:(k)]
 # print(idxN)
 
 # plot results
-plt.figure()
-df.iloc[:,0].plot(color = 'grey') # data
+f, ax = plt.subplots()
+df.iloc[:,0].plot(color = 'grey' , ax = ax) # data
 for j in idxN: 
-    df.iloc[:,0][j:j+m].plot() # detected instances
-selectedPattern.plot(color = 'black') #orginal pattern
+    df.iloc[:,0][j:j+m].plot(ax = ax) # detected instances
+selectedPattern.plot(color = 'black', ax = ax) #orginal pattern
+
+st.pyplot(f)
+
