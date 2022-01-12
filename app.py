@@ -91,3 +91,47 @@ dato = st.sidebar.date_input('test')
 tall2 = st.sidebar.slider('test')
 #var = st.sidebar.radio('test')
 st.write(tekst)
+
+
+# part2:
+import stumpy
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+
+# generate signal
+noSignal = pd.DataFrame(np.random.randn(100, 1))
+signal = pd.DataFrame(np.sin(np.arange(0., 360.,10.) * np.pi / 180. ))
+
+df = pd.DataFrame()
+for i in range(10):
+    df = df.append(noSignal, ignore_index= True)
+    df = df.append(signal, ignore_index= True)
+
+noise = np.random.randn(len(df), 1)*0.1
+df = df+ noise # add noise
+
+
+# detection parameters
+m = int(36)
+patternIdX = 100
+
+
+#run detetection
+mp = stumpy.stump(df.iloc[:,0], m)
+selectedPattern = df.iloc[:,0][patternIdX:patternIdX+m]
+distance_profile = stumpy.core.mass(selectedPattern, df.iloc[:,0])
+idx = np.argmin(distance_profile) 
+# print(idx)
+
+# select # of outputs
+k = 10
+idxN = np.argpartition(distance_profile, k)[:(k)] 
+# print(idxN)
+
+# plot results
+plt.figure()
+df.iloc[:,0].plot(color = 'grey') # data
+for j in idxN: 
+    df.iloc[:,0][j:j+m].plot() # detected instances
+selectedPattern.plot(color = 'black') #orginal pattern
