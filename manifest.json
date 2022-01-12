@@ -6,7 +6,7 @@
   },
   "locale": "nb_NO.cp1252",
   "python": {
-    "version": "3.9.7",
+    "version": "3.8.9",
     "package_manager": {
       "name": "pip",
       "version": "21.2.3",
