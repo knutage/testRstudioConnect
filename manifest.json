@@ -6,16 +6,16 @@
   },
   "locale": "nb_NO.cp1252",
   "python": {
-    "version": "3.8.9",
+    "version": "3.9.7",
     "package_manager": {
       "name": "pip",
-      "version": "20.1.1",
+      "version": "21.2.3",
       "package_file": "requirements.txt"
     }
   },
   "files": {
     "requirements.txt": {
-      "checksum": "a60f5eb7116c2ffc7e4114b2b0bc6d14"
+      "checksum": "24c0075e919f086418595a0f4a6a6af2"
     },
     ".ipynb_checkpoints\\exampleNotebook-checkpoint.ipynb": {
       "checksum": "02f666860b227dc166fef48e4299faf9"
@@ -25,6 +25,9 @@
     },
     "app.py": {
       "checksum": "e1d878cb50dad3da75dc9bed3bb6c868"
+    },
+    "cmd rsconnect.txt": {
+      "checksum": "3bb0f4e6c342c4148873bbcc0ec2d153"
     },
     "exampleNotebook.ipynb": {
       "checksum": "02f666860b227dc166fef48e4299faf9"
